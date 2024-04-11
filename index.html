@@ -13,11 +13,50 @@
       referrerpolicy="no-referrer"
     />
   </head>
+  <style>
+    :root {
+      --balloon1-bg-color: #eaeaeae6;
+      --balloon2-bg-color: #e8dab2e6;
+      --balloon3-bg-color: #dd6e42e3;
+      --balloon4-bg-color: #4f6d7ad6;
+      --balloon5-bg-color: #eaeaeae6;
+      --bg-color: #c0d6df;
+
+      --balloon-anim-1: balloon1 15s ease infinite;
+      --balloon-anim-2: balloon2 5s ease infinite;
+      --balloon-anim-3: balloon3 10s ease infinite;
+      --balloon-anim-4: balloon4 5s ease infinite;
+      --balloon-anim-5: balloon5 15s ease infinite;
+      --balloon-anim-6: balloon7 5s ease infinite;
+    }
+  </style>
   <body>
     <!--Font Awesome CDN-->
-    <div id="balloon-container">
+    <!-- <div class="happy">
+      <div class="balloon balloon1 balloon-anim1"></div>
+      <div class="balloon balloon2 balloon-anim6"></div>
+      <div class="balloon balloon3 balloon-anim3"></div>
+      <div class="balloon balloon4 balloon-anim4"></div>
+      <div class="balloon balloon5 balloon-anim5"></div>
     </div>
-    <div class="container">
+  
+    <div class="birthday">
+      <div class="balloon balloon3 balloon-anim6"></div>
+      <div class="balloon balloon1 balloon-anim2"></div>
+      <div class="balloon balloon4 balloon-anim1"></div>
+      <div class="balloon balloon2 balloon-anim6"></div>
+      <div class="balloon balloon1 balloon-anim4"></div>
+      <div class="balloon balloon3 balloon-anim5"></div>
+      <div class="balloon balloon2 balloon-anim1"></div>
+      <div class="balloon balloon4 balloon-anim6"></div>
+    </div> -->
+  
+    <!-- <div class="name">Sweetheart</div> -->
+  
+    <div id="balloon-container">
+      <img  class="icon-image" src="bibipet-cuteanimals.gif" />
+    </div>
+    <div class="container container-box ">
       <div class="slide">
         <div
           class="item"
@@ -26,7 +65,6 @@
           "
         >
           <div class="content">
-            <div class="name">Switzerland</div>
             <div class="des">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
             </div>
@@ -41,7 +79,6 @@
           style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg)"
         >
           <div class="content">
-            <div class="name">Finland</div>
             <div class="des">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
             </div>
@@ -56,7 +93,6 @@
           style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg)"
         >
           <div class="content">
-            <div class="name">Iceland</div>
             <div class="des">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
             </div>
@@ -67,7 +103,6 @@
           style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg)"
         >
           <div class="content">
-            <div class="name">Australia</div>
             <div class="des">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
             </div>
@@ -78,7 +113,6 @@
           style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg)"
         >
           <div class="content">
-            <div class="name">Netherland</div>
             <div class="des">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
             </div>
@@ -89,7 +123,6 @@
           style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg)"
         >
           <div class="content">
-            <div class="name">Ireland</div>
             <div class="des">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
             </div>
@@ -150,19 +183,19 @@
       }
     }
 
-    function removeBalloons() {
-      balloonContainer.style.opacity = 0;
-      setTimeout(() => {
-        balloonContainer.remove();
-      }, 500);
-    }
+    // function removeBalloons() {
+    //   balloonContainer.style.opacity = 0;
+    //   setTimeout(() => {
+    //     balloonContainer.remove();
+    //   }, 500);
+    // }
 
     window.addEventListener("load", () => {
       createBalloons(30);
     });
 
-    window.addEventListener("click", () => {
-      removeBalloons();
-    });
+    // window.addEventListener("click", () => {
+    //   removeBalloons();
+    // });
   </script>
 </html>
