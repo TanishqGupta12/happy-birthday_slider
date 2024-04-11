@@ -223,7 +223,7 @@ body {
   width: 50vw;
   z-index: 15;
   background-color: #1f1e1e47;
-  /* display: none; */
+  display: none;
 }
 
 .highlight > .link{
