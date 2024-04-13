@@ -14,21 +14,21 @@
     />
   </head>
   <body>
-
     <!-- <div class="name">Sweetheart</div> -->
 
     <div class="highlight">
-      <a href="indexs.html" class="link">Visit W3Schools.com!</a>
+      <a href="indexs.html" class="link">birthday message you</a>
     </div>
     <div id="balloon-container">
       <img class="icon-image" src="bibipet-cuteanimals.gif" />
     </div>
     <div class="container container-box">
       <div class="slide">
+        <!-- image 1 -->
         <div
           class="item"
           style="
-            background-image: url(https://i.ibb.co/wJ0NzVw/IMG-20230829-160351.jpg);
+            background-image: url(363319378_1037204184107259_3696340344881039444_n.jpg);
           "
         >
           <div class="content">
@@ -41,23 +41,30 @@
             </audio>
           </div>
         </div>
+        <!-- image 2 -->
         <div
           class="item"
-          style="background-image: url(https://i.ibb.co/jrRb11q/img2.jpg)"
+          style="
+            background-image: url(413957828_671311791845725_1181697682929835338_n.jpg);
+          "
         >
           <div class="content">
             <div class="des">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
             </div>
-            <audio autoplay>
+            <!-- <audio autoplay>
               <source src="vlog-hip-hop-18447.mp3" type="audio/mp3" />
               Your browser does not support the audio tag.
-            </audio>
+            </audio> -->
           </div>
         </div>
+        <!-- image 3 -->
+
         <div
           class="item"
-          style="background-image: url(https://i.ibb.co/NSwVv8D/img3.jpg)"
+          style="
+            background-image: url(412496550_2277190125810621_2917010354239382288_n.jpg);
+          "
         >
           <div class="content">
             <div class="des">
@@ -65,9 +72,11 @@
             </div>
           </div>
         </div>
+        <!-- image 4 -->
+
         <div
           class="item"
-          style="background-image: url(https://i.ibb.co/Bq4Q0M8/img4.jpg)"
+          style="background-image: url(394581456_864671531776290_8231750035760934904_n.jpg)"
         >
           <div class="content">
             <div class="des">
@@ -75,9 +84,11 @@
             </div>
           </div>
         </div>
+        <!-- image 5 -->
+
         <div
           class="item"
-          style="background-image: url(https://i.ibb.co/jTQfmTq/img5.jpg)"
+          style="background-image: url(394118664_132426189962047_4178210124395012416_n.jpg)"
         >
           <div class="content">
             <div class="des">
@@ -85,9 +96,11 @@
             </div>
           </div>
         </div>
+        <!-- image 6 -->
+
         <div
           class="item"
-          style="background-image: url(https://i.ibb.co/RNkk6L0/img6.jpg)"
+          style="background-image: url(394115337_633947712275140_6650635257656160413_n.jpg)"
         >
           <div class="content">
             <div class="des">
@@ -114,15 +127,19 @@
         highlight.style.display = "block";
         return;
       }
+      if (cout == 4) {
+        setTimeout(() => {
+          highlight.style.display = "block";
+        }, 1000);
+      }
       document.querySelector(".slide").appendChild(items[0]);
       cout = cout + 1;
-      console.log(cout);
     });
 
     prev.addEventListener("click", function () {
       let items = document.querySelectorAll(".item");
       highlight.style.display = "none";
-      if (cout === 0) {
+      if (cout <= 0) {
         return;
       }
       document.querySelector(".slide").prepend(items[items.length - 1]);
