@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>❤️</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -14,10 +14,12 @@
     />
   </head>
   <body>
-    <!-- <div class="name">Sweetheart</div> -->
-
+    <audio autoplay>
+      <source src="keys-of-moon-white-petals(chosic.com).mp3" type="audio/mp3" />
+      Your browser does not support the audio tag.
+    </audio>
     <div class="highlight">
-      <a href="indexs.html" class="link">birthday message you</a>
+      <a href="indexs.html" class="link animate-heartbeat">birthday message you</a>
     </div>
     <div id="balloon-container">
       <img class="icon-image" src="bibipet-cuteanimals.gif" />
@@ -33,12 +35,8 @@
         >
           <div class="content">
             <div class="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+              <p></p>
             </div>
-            <audio autoplay>
-              <source src="business-168341.mp3" type="audio/mp3" />
-              Your browser does not support the audio tag.
-            </audio>
           </div>
         </div>
         <!-- image 2 -->
@@ -50,12 +48,8 @@
         >
           <div class="content">
             <div class="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+              <p></p>
             </div>
-            <!-- <audio autoplay>
-              <source src="vlog-hip-hop-18447.mp3" type="audio/mp3" />
-              Your browser does not support the audio tag.
-            </audio> -->
           </div>
         </div>
         <!-- image 3 -->
@@ -68,7 +62,7 @@
         >
           <div class="content">
             <div class="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+              <p></p>
             </div>
           </div>
         </div>
@@ -76,11 +70,13 @@
 
         <div
           class="item"
-          style="background-image: url(394581456_864671531776290_8231750035760934904_n.jpg)"
+          style="
+            background-image: url(394581456_864671531776290_8231750035760934904_n.jpg);
+          "
         >
           <div class="content">
             <div class="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+              <p></p>
             </div>
           </div>
         </div>
@@ -88,11 +84,13 @@
 
         <div
           class="item"
-          style="background-image: url(394118664_132426189962047_4178210124395012416_n.jpg)"
+          style="
+            background-image: url(394118664_132426189962047_4178210124395012416_n.jpg);
+          "
         >
           <div class="content">
             <div class="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+              <p></p>
             </div>
           </div>
         </div>
@@ -100,11 +98,13 @@
 
         <div
           class="item"
-          style="background-image: url(394115337_633947712275140_6650635257656160413_n.jpg)"
+          style="
+            background-image: url(394115337_633947712275140_6650635257656160413_n.jpg);
+          "
         >
           <div class="content">
             <div class="des">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!
+              <p></p>
             </div>
           </div>
         </div>
@@ -117,6 +117,16 @@
     </div>
   </body>
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let des = document.querySelectorAll("p");
+      des[0].textContent = "🎉✨ 🥳 🎂 💙 💖";
+      des[1].textContent = "Wishing you a day filled with joy, laughter, and all the things that make you smile. ";
+      des[2].textContent = " May this new year of your life bring you closer to your dreams and fill your heart with love and fulfillment";
+      des[3].textContent = " Enjoy every moment of your special day and cherish the memories you create";
+      des[4].textContent = "Here's to another amazing year ahead! Cheers to you!";
+      des[5].textContent = "";
+    });
+
     let next = document.querySelector(".next");
     let prev = document.querySelector(".prev");
     var highlight = document.querySelector(".highlight");
