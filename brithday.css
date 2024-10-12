@@ -813,7 +813,7 @@ font-family: 'Source Sans Pro', sans-serif;
 }
 .one_number {
     position: absolute;
-    left: 147px;
+    left: 160px;
     top: 25px;
     width: 9px;
 }
@@ -835,7 +835,7 @@ font-family: 'Source Sans Pro', sans-serif;
     top: 0px;
     right: 0px;
 }
-.seven_number {
+/* .seven_number {
     position: absolute;
     right: 147px;
     top: 25px;
@@ -872,7 +872,7 @@ font-family: 'Source Sans Pro', sans-serif;
     animation: flame 0.5s infinite linear;
     -moz-animation: flame 0.5s infinite linear;
     bottom: 2px;
-}
+} */
 .one_flame {
     height: 12px;
     width: 6px;

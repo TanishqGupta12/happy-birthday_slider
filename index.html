@@ -95,20 +95,7 @@
               </div>
             </div>
           </div>
-          <!-- image 6 -->
-  
-          <div
-            class="item"
-            style="
-              background-image: url(394115337_633947712275140_6650635257656160413_n.jpg);
-            "
-          >
-            <div class="content">
-              <div class="des">
-                <p></p>
-              </div>
-            </div>
-          </div>
+
         </div>
   
         <div class="button">
@@ -118,77 +105,83 @@
       </div>
   </body>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let des = document.querySelectorAll("p");
-      des[0].textContent = "🎉✨ 🥳 🎂 💙 💖";
-      des[1].textContent = "Wishing you a day filled with joy, laughter, and all the things that make you smile. ";
-      des[2].textContent = " May this new year of your life bring you closer to your dreams and fill your heart with love and fulfillment";
-      des[3].textContent = " Enjoy every moment of your special day and cherish the memories you create";
-      des[4].textContent = "Here's to another amazing year ahead! Cheers to you!";
-      des[5].textContent = "";
-    });
-
-    let next = document.querySelector(".next");
-    let prev = document.querySelector(".prev");
-    var highlight = document.querySelector(".highlight");
-    var cout = 0;
-    next.addEventListener("click", function () {
-      let items = document.querySelectorAll(".item");
-      if (cout === items.length - 1) {
-        highlight.style.display = "block";
-        return;
-      }
-      if (cout == 4) {
-        setTimeout(() => {
+    document.addEventListener("DOMContentLoaded", () => {
+      const des = document.querySelectorAll("p");
+      const messages = [
+        "🎉✨ 🥳 🎂 💙 💖",
+        "Wishing you a day filled with joy, laughter, and all the things that make you smile.",
+        "May this new year of your life bring you closer to your dreams and fill your heart with love and fulfillment.",
+        "Enjoy every moment of your special day and cherish the memories you create.",
+        "Here's to another amazing year ahead! Cheers to you!"
+      ];
+  
+      des.forEach((item, index) => {
+        item.textContent = messages[index] || "";
+      });
+  
+      let cout = 0;
+      const next = document.querySelector(".next");
+      const prev = document.querySelector(".prev");
+      const highlight = document.querySelector(".highlight");
+  
+      next.addEventListener("click", () => {
+        const items = document.querySelectorAll(".item");
+        if (cout === items.length - 1) {
           highlight.style.display = "block";
-        }, 1000);
+          return;
+        }
+        if (cout === 3) {
+          setTimeout(() => {
+            highlight.style.display = "block";
+          }, 1000);
+        }
+        document.querySelector(".slide").appendChild(items[0]);
+        cout++;
+      });
+  
+      prev.addEventListener("click", () => {
+        const items = document.querySelectorAll(".item");
+        highlight.style.display = "none";
+        if (cout <= 0) return;
+  
+        document.querySelector(".slide").prepend(items[items.length - 1]);
+        cout--;
+      });
+  
+      const balloonContainer = document.getElementById("balloon-container");
+  
+      function random(num) {
+        return Math.floor(Math.random() * num);
       }
-      document.querySelector(".slide").appendChild(items[0]);
-      cout = cout + 1;
-    });
-
-    prev.addEventListener("click", function () {
-      let items = document.querySelectorAll(".item");
-      highlight.style.display = "none";
-      if (cout <= 0) {
-        return;
+  
+      function getRandomStyles() {
+        const r = random(255);
+        const g = random(255);
+        const b = random(255);
+        const mt = random(200);
+        const ml = random(50);
+        const dur = random(5) + 5;
+        return `
+          background-color: rgba(${r},${g},${b},0.7);
+          color: rgba(${r},${g},${b},0.7); 
+          box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
+          margin: ${mt}px 0 0 ${ml}px;
+          animation: float ${dur}s ease-in infinite;
+        `;
       }
-      document.querySelector(".slide").prepend(items[items.length - 1]);
-      cout = cout - 1;
-      console.log(cout);
-    });
-    const balloonContainer = document.getElementById("balloon-container");
-
-    function random(num) {
-      return Math.floor(Math.random() * num);
-    }
-
-    function getRandomStyles() {
-      var r = random(255);
-      var g = random(255);
-      var b = random(255);
-      var mt = random(200);
-      var ml = random(50);
-      var dur = random(5) + 5;
-      return `
-background-color: rgba(${r},${g},${b},0.7);
-color: rgba(${r},${g},${b},0.7); 
-box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
-margin: ${mt}px 0 0 ${ml}px;
-animation: float ${dur}s ease-in infinite
-`;
-    }
-
-    function createBalloons(num) {
-      for (var i = num; i > 0; i--) {
-        var balloon = document.createElement("div");
-        balloon.className = "balloon";
-        balloon.style.cssText = getRandomStyles();
-        balloonContainer.append(balloon);
+  
+      function createBalloons(num) {
+        for (let i = 0; i < num; i++) {
+          const balloon = document.createElement("div");
+          balloon.className = "balloon";
+          balloon.style.cssText = getRandomStyles();
+          balloonContainer.appendChild(balloon);
+        }
       }
-    }
-    window.addEventListener("load", () => {
-      createBalloons(100);
+  
+      window.addEventListener("load", () => {
+        createBalloons(100);
+      });
     });
-  </script>
+  </script>  
 </html>
