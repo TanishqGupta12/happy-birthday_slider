@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 body {
@@ -9,6 +10,9 @@ body {
   overflow: hidden;
 }
 
+.container-box {
+  width: 50%;
+}
 .container {
   position: absolute;
   top: 50%;
@@ -202,16 +206,8 @@ body {
   }
 }
 
-.container-box {
-  /* height: 50%; */
-  width: 50%;
-}
 
-.icon-image {
-  height: 35%;
-  width: 15%;
-  margin: 25% auto;
-}
+
 /* .link{
   position: relative;
   left: 50%;
@@ -266,4 +262,11 @@ body {
 
 .animate-heartbeat {
   animation: heartbeat 2s infinite;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background: #e6e3ca;
+    overflow: hidden;
+  }
 }
